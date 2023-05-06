@@ -12,7 +12,7 @@ const products = useSelector((state)=>state.cart)
     <div>
     <h3>Cart</h3>
     <div className="cartWrapper">
-        {products.map((product) => (
+        {products && products.length ? products.map((product) => (
             <div key={product.id} className="cartCard">
                 <img src={product.image} alt="" />
                 <h5>{product.title}</h5>
@@ -24,7 +24,7 @@ const products = useSelector((state)=>state.cart)
                     Remove
                 </button>
             </div>
-        ))}
+        )) : "No items Please add the items from the products list"}
     </div>
 </div>
   )

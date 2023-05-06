@@ -19,7 +19,7 @@ export default function Products() {
         // };
         // fetchProducts();
     }, []);
-
+console.log(products);
     const handleAdd = (product) => {
         dispatch(add(product));
     };
